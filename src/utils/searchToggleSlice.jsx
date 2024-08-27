@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const searchToggleSlice = createSlice({
-    name:"search",
+    name:"search_Toggle",
     initialState:{
         searchToggle:false,
     },

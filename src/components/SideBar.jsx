@@ -18,8 +18,9 @@ const SideBar = () => {
 
   return (
     <>
-   <div className={`w-72 ${!navToggle && '-ml-[300px]'} transition-all duration-500 dark:bg-gray-600 dark:text-white fixed z-20 border border-black h-full rounded-lg bg-gray-200`}>
-      <div className='text-[18px] font-normal p-6  m-5 w-full flex flex-col'>
+   <div className={`w-72 ${!navToggle && '-ml-[300px]'} transition-all duration-500 fixed z-20 h-full rounded-lg bg-gray-200`}>
+      <div className='dark:bg-gray-600 dark:text-white h-full -mt-[1px] border border-black rounded-lg'>
+      <div className='text-[18px] font-normal p-6 m-5 w-full flex flex-col'>
         <a href="/"><h1 className='flex gap-3 items-center px-4 py-1 rounded-lg w-full cursor-pointer'><IoHomeOutline className='' size={20}/> <span>Home</span> </h1></a>
         <a href="/search/trending shorts video"><h1 className='flex gap-3 items-center px-4 py-1 rounded-lg mt-2 w-full cursor-pointer'><MdOutlineVideoCameraFront size={20}/> Shorts</h1></a>
         <h1 className='ml-[15px] flex gap-3 items-center rounded-lg mt-2 w-full cursor-pointer'><MdSubscriptions size={20}/>Subscriptions</h1>
@@ -40,6 +41,7 @@ const SideBar = () => {
             <li className='flex gap-3 items-center px-4 py-1 rounded-lg mt-2 w-full cursor-pointer'><SlLike size={20}/>Liked video</li>
           </ul>
         </div>
+      </div>
       </div>
     </div>
     </>

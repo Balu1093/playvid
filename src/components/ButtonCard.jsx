@@ -15,7 +15,7 @@ cardRef.current.addEventListener("wheel",cartWheel)
 
   return (
    
-    <div className='flex overflow-x-scroll w-full scrollbar-hide ml-3 md:ml-0' ref={cardRef}>
+    <div className='flex overflow-x-scroll w-full scrollbar-hide ml-3 md:ml-8 lg:ml-10 2xl:ml-20' ref={cardRef}>
     <a href={'/'}><div className='text-black'>
         <button className='bg-gray-300 rounded-lg px-4 py-2 m-2'>All</button>
     </div></a>

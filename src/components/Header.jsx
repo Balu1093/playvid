@@ -17,7 +17,7 @@ import { searchToggle } from '../utils/searchToggleSlice';
 
 const Header = ({darkMode,setDarkMode}) => {
   const searchInfo = useSelector((store)=>store.search)
-  const toggle_search = useSelector((store)=>store.search.searchToggle)
+  const toggle_search = useSelector((store)=>store.search_Toggle.searchToggle)
   const nav_Toggle = useSelector((store)=>store.config.navSmToggle)
   const dispatch = useDispatch()
   const navToggle = useSelector((state)=>state.config.navToggle)
@@ -78,13 +78,13 @@ const Header = ({darkMode,setDarkMode}) => {
     <div className=''>
     {!toggle_search && <div className='bg-white fixed z-20 h-24 grid grid-flow-col dark:bg-gray-600 dark:text-white w-full -mt-24'>
       <div className='flex items-center col-span-1'>
-      <div className='hidden md:block  mx-1 md:mx-5 my-2'onClick={toggleNav}>
+      <div className='hidden md:block mx-1 md:mx-5 my-2'onClick={toggleNav}>
         {navToggle?<AiOutlineClose size={30} className='cursor-pointer'/>:<TfiAlignLeft size={30} className='cursor-pointer'/>}
         </div>
-      <div className='md:hidden ml-3 mx-1 md:mx-5 my-2'onClick={toggleSmNav}>
+      <div className='md:hidden ml-2 md:mx-5 my-2'onClick={toggleSmNav}>
         {nav_Toggle?<AiOutlineClose size={30} className='cursor-pointer'/>:<TfiAlignLeft size={30} className='cursor-pointer'/>}
         </div>
-      <div className='ml-3 w-28 h-26 md:w-40'>
+      <div className='ml-4 w-28 h-26 md:w-40'>
         <a href="/"><img className='w-full h-full' src={playvid} alt="" /></a>
       </div>
       </div>
@@ -97,7 +97,7 @@ const Header = ({darkMode,setDarkMode}) => {
 
         {search && <div className="fixed top-[70px] w-[250px] md:[300px] lg:w-[400px] 2xl:w-[800px] flex flex-col text-white font-medium"><div className='bg-black rounded-lg bg-opacity-90'>{focus && result.map((data)=><a href={"/search/"+data}><div className='flex gap-2 items-center px-4 py-2 hover:bg-slate-200 hover:bg-opacity-35'><CiSearch/>{data}</div></a>)}</div></div>}
         </div>
-      <div className='mx-4 col-span-1 flex items-center justify-end gap-14 mr-10'>
+      <div className='col-span-1 flex items-center justify-end gap-9 md:gap-16 mr-10'>
         <div className='ml-5 md:ml-0'>
         <DarkMode toggleDark={toggleDark}/>
         </div>

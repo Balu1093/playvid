@@ -59,7 +59,7 @@ function App() {
 
   return (
       <ThemeProvider theme={theme}>
-      <div className={`${darkMode?'dark':''}`}>
+      <div className={`${darkMode?'dark':''} dark:bg-gray-600`}>
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
       <RouterProvider router={appRouter}/>
       <MyComponent/>

@@ -10,7 +10,7 @@ const appStore =configureStore({
      search:searchSlice,
      video:videoSlice,
      chat:chatSlice,
-     search:searchToggleSlice,
+     search_Toggle:searchToggleSlice,
     }
 });
 

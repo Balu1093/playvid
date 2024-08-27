@@ -6,6 +6,7 @@ import { theme } from '..'
 import { ThemeProvider } from 'styled-components'
 import SideBarSmallScreen from './SideBarSmallScreen'
 import { useSelector } from 'react-redux'
+import ScrollToTop from './ScrollToTop'
 
 const Body = () => {
   const nav_Toggle = useSelector((store)=>store.config.navSmToggle)
@@ -16,6 +17,7 @@ const Body = () => {
   return (
     <ThemeProvider theme={theme}>
     <div className='flex dark:bg-gray-600 dark:text-white mt-24'>
+      <ScrollToTop/>
       <SideBarSmallScreen/>
       <SideBar/>
       <Outlet/>
